@@ -1,0 +1,46 @@
+//Bubble Sort
+//Speed:  O(n) to O(n^2) Slow   
+//
+for i = (n-1) to 1
+  for j = 0 to (i-1)
+    if A[j] > A[j+1]
+      swap(A[j]. A[j+1])
+
+//Insertion Sort
+//Speed: O(n) to O(n^2)  slightly faster than bubble sort unless completely backward before sorting
+
+for i = 1 to n-1
+  j=i
+  while j > 0 and A[j] < A[j-1]
+    swap(A[j].A[j-1])
+    j=j-1
+    
+//Merge Sort
+//Speed O(nlog(n))
+for i=1; i < size; i = 2i
+  for j=0; j<size -1; j=j+2i
+    Merge(&A[j], i, min(2i, size-j))
+
+//Merge(A, end1, end2)
+  i =0, j=end1, k=0
+  while i<end1 and j<end2
+    if(A[i]<A[j])
+      temp[k]=A[i]
+      i=i+1, k=k+1
+     else
+      temp[k] = A[j]
+      j=j+1, k = k+1
+  while i < end1
+    temp[k]=A[i]
+    i=i+1, k =k+1
+   while j<end2
+    temp[k] = A[j]
+    j=j+1, k =k+1
+   for(i=0;i<end2; i++)
+    A[i]= temp[i]
+
+
+//Quick Sort
+
+
+    
